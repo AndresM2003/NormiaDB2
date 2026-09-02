@@ -1,0 +1,384 @@
+/* ==================== Variables y base ==================== */
+:root {
+  --azul-utb: #0033a0;
+  --azul-claro: #2e6bff;
+  --cian: #18c5e8;
+  --tinta: #101826;
+  --gris: #5b6472;
+  --linea: #e2e6ec;
+  --fondo: #f5f7fb;
+  --panel: #ffffff;
+  --ambar: #e8930b;
+  --ok: #1a8f5e;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--tinta);
+  font-family:
+    "Segoe UI",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  padding: 28px 20px 80px;
+}
+.wrap {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+header {
+  margin-bottom: 28px;
+}
+.eyebrow {
+  font-family: "Consolas", "Courier New", monospace;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--azul-claro);
+  font-weight: 700;
+}
+h1 {
+  margin: 6px 0 4px;
+  font-size: 28px;
+  color: var(--azul-utb);
+  letter-spacing: -0.02em;
+}
+.sub {
+  color: var(--gris);
+  font-size: 14.5px;
+  max-width: 760px;
+  line-height: 1.5;
+}
+
+/* ==================== Navegación por etapas ==================== */
+.steps {
+  display: flex;
+  gap: 6px;
+  margin: 22px 0 26px;
+  flex-wrap: wrap;
+}
+.step-pill {
+  font-size: 12.5px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: #eef1f8;
+  color: var(--gris);
+  border: 1px solid var(--linea);
+}
+.step-pill.active {
+  background: var(--azul-utb);
+  color: #fff;
+  border-color: var(--azul-utb);
+}
+.step-pill .n {
+  opacity: 0.7;
+  margin-right: 5px;
+}
+
+/* ==================== Paneles y textos ==================== */
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--linea);
+  border-radius: 12px;
+  padding: 22px 24px;
+  margin-bottom: 20px;
+}
+.panel h2 {
+  margin: 0 0 4px;
+  font-size: 17px;
+  color: var(--tinta);
+}
+.panel .desc {
+  color: var(--gris);
+  font-size: 13.5px;
+  margin: 0 0 16px;
+  line-height: 1.5;
+}
+
+.syntax {
+  background: #f0f4fb;
+  border: 1px dashed #c4d0e8;
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-size: 12.5px;
+  color: #334;
+  margin-bottom: 18px;
+  line-height: 1.7;
+}
+.syntax code {
+  background: #fff;
+  border: 1px solid var(--linea);
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-family: "Consolas", "Courier New", monospace;
+}
+
+/* ==================== Formulario de formatos ==================== */
+.formato {
+  border: 1px solid var(--linea);
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-bottom: 14px;
+  background: #fbfcfe;
+}
+.formato-head {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.formato-head input[type="text"] {
+  font-weight: 700;
+  font-size: 14.5px;
+  border: 1px solid var(--linea);
+  border-radius: 6px;
+  padding: 7px 10px;
+  flex: 1;
+  color: var(--azul-utb);
+  font-family: inherit;
+}
+.formato-head button {
+  background: none;
+  border: 1px solid var(--linea);
+  color: var(--gris);
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 12px;
+}
+.formato-head button:hover {
+  border-color: #d33;
+  color: #d33;
+}
+textarea {
+  width: 100%;
+  min-height: 110px;
+  border: 1px solid var(--linea);
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-family: "Consolas", "Courier New", monospace;
+  font-size: 13px;
+  resize: vertical;
+  color: var(--tinta);
+  background: #fff;
+}
+
+/* ==================== Botones y controles ==================== */
+.row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.btn {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-weight: 700;
+  font-size: 13.5px;
+  cursor: pointer;
+  font-family: inherit;
+}
+.btn-primary {
+  background: var(--azul-utb);
+  color: #fff;
+}
+.btn-primary:hover {
+  background: #00278a;
+}
+.btn-ghost {
+  background: #fff;
+  border: 1px solid var(--linea);
+  color: var(--tinta);
+}
+.btn-ghost:hover {
+  border-color: var(--azul-claro);
+  color: var(--azul-claro);
+}
+.btn-generate {
+  background: linear-gradient(90deg, var(--azul-utb), var(--azul-claro));
+  color: #fff;
+  padding: 12px 26px;
+  font-size: 14.5px;
+  border-radius: 9px;
+}
+
+/* ==================== Tablas de normalización ==================== */
+table.fnt {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 13px;
+  margin-top: 6px;
+}
+table.fnt th {
+  background: #fff200;
+  text-align: left;
+  padding: 7px 10px;
+  border: 1px solid #d8d100;
+  font-size: 12.5px;
+}
+table.fnt td {
+  padding: 7px 10px;
+  border: 1px solid var(--linea);
+  vertical-align: top;
+}
+table.fnt tr td:first-child {
+  font-weight: 700;
+  color: var(--azul-utb);
+  white-space: nowrap;
+}
+.pk {
+  color: #b3261e;
+  font-weight: 700;
+}
+.fk {
+  color: var(--azul-claro);
+  font-weight: 700;
+}
+.fam {
+  color: var(--gris);
+}
+
+/* ==================== Selector de llaves ==================== */
+.pkchooser {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+.pkchooser label {
+  font-size: 12px;
+  border: 1px solid var(--linea);
+  border-radius: 14px;
+  padding: 4px 10px;
+  cursor: pointer;
+  font-family: "Consolas", "Courier New", monospace;
+}
+.pkchooser input {
+  margin-right: 5px;
+}
+.pkchooser label.sel {
+  background: #fff4e0;
+  border-color: var(--ambar);
+  color: #8a5a00;
+}
+
+/* ==================== Diagrama de relaciones ==================== */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px 30px;
+  position: relative;
+}
+.card {
+  border: 2px solid var(--azul-utb);
+  border-radius: 8px;
+  min-width: 170px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0, 40, 120, 0.06);
+}
+.card .title {
+  background: var(--azul-utb);
+  color: #fff;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 6px 12px;
+  border-radius: 5px 5px 0 0;
+  font-family: "Consolas", "Courier New", monospace;
+}
+.card .fields {
+  padding: 8px 12px;
+  font-family: "Consolas", "Courier New", monospace;
+  font-size: 12.3px;
+  line-height: 1.9;
+}
+.card.junction {
+  border-color: var(--ambar);
+}
+.card.junction .title {
+  background: var(--ambar);
+}
+
+svg.connectors {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: visible;
+}
+.legend {
+  display: flex;
+  gap: 18px;
+  font-size: 12px;
+  color: var(--gris);
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+.legend span.dot {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+/* ==================== Exportación y pie ==================== */
+.rel-list {
+  margin-top: 16px;
+  font-size: 13px;
+}
+.rel-list div {
+  padding: 4px 0;
+  border-bottom: 1px dashed var(--linea);
+}
+.rel-list b {
+  color: var(--azul-utb);
+}
+
+.empty {
+  color: var(--gris);
+  font-size: 13.5px;
+  text-align: center;
+  padding: 26px 0;
+}
+.exportbar {
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.exportbar .lbl {
+  font-size: 12.5px;
+  color: var(--gris);
+  font-weight: 700;
+  margin-right: 2px;
+}
+.btn-export {
+  background: #fff;
+  border: 1px solid var(--linea);
+  color: var(--tinta);
+  padding: 9px 15px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+  font-family: inherit;
+}
+.btn-export:hover {
+  border-color: var(--azul-claro);
+  color: var(--azul-claro);
+  background: #f2f6ff;
+}
+.foot {
+  text-align: center;
+  color: var(--gris);
+  font-size: 11.5px;
+  margin-top: 36px;
+}
